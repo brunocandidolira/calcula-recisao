@@ -1,5 +1,5 @@
 @media (max-width: 1000px) {
-  .hero { gap: 36px; } .hero h1 { letter-spacing: -1.8px; }
+  .hero { column-gap: 36px; } .hero h1 { letter-spacing: -1.8px; }
   .hero-copy { padding-top: 22px; } .calculator-card { padding: 22px; }
 }
 @media (max-width: 720px) {
@@ -8,6 +8,7 @@
   .site-header nav > a:not(.nav-cta) { display: none; } .nav-cta { padding: 8px 10px; font-size: 11px; }
   .brand-mark { width: 25px; height: 25px; margin-right: 7px; }
   .hero { grid-template-columns: 1fr; padding-block: 32px 36px; gap: 28px; }
+  .hero-left { gap: 28px; }
   .hero-copy { padding-top: 0; } .hero h1 { font-size: 46px; max-width: 500px; }
   .eyebrow { font-size: 9px; letter-spacing: 1px; margin-bottom: 16px; }
   .hero-description { font-size: 14px; margin-block: 18px; }
@@ -22,8 +23,9 @@
   .faq { gap: 12px; padding-bottom: 40px; }
   .site-footer { align-items: flex-start; flex-direction: column; gap: 16px; }
 }
-@media (max-width: 380px) {
+@media (max-width: 600px) {
   .calculator-form { grid-template-columns: 1fr; }
+  .insurance-calculator-form { grid-template-columns: 1fr; }
   .hero h1 { font-size: 37px; }
   .estimate-badge { display: none; }
 }

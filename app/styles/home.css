@@ -1,4 +1,5 @@
-.hero { padding-block: 58px 64px; display: grid; grid-template-columns: 1fr 1fr; gap: 76px; align-items: start; }
+.hero { padding-block: 58px 64px; display: grid; grid-template-columns: 1fr 1fr; column-gap: 76px; align-items: start; }
+.hero-left { display: grid; gap: 32px; min-width: 0; }
 .hero-copy { padding-top: 42px; }
 .eyebrow { font-size: 10px; font-weight: 550; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 22px; }
 .eyebrow > span { display: inline-block; width: 6px; height: 6px; background: #8eafff; box-shadow: 0 0 12px #638fff60; border-radius: 50%; margin-right: 7px; }

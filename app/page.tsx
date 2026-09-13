@@ -5,6 +5,7 @@ import { HowItWorks } from '@/app/components/home/how-it-works';
 import { PracticalGuide } from '@/app/components/home/practical-guide';
 import { FrequentlyAskedQuestions } from '@/app/components/home/frequently-asked-questions';
 import { RescisaoCalculator } from '@/app/components/calculator/rescisao-calculator';
+import { CalcSeguro } from './components/calculadorSeguro/calcular-seguro-desemprego';
 
 export default function Home() {
   return (
@@ -12,7 +13,10 @@ export default function Home() {
       <SiteHeader />
       <main>
         <section className="hero" aria-labelledby="hero-title">
-          <HeroIntro />
+          <div className="hero-left">
+            <HeroIntro />
+            <CalcSeguro />
+          </div>
           <RescisaoCalculator />
         </section>
         <HowItWorks />
