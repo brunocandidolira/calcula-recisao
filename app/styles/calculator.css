@@ -1,4 +1,13 @@
 .calculator-card { min-width: 0; background: linear-gradient(145deg, #282b32, #1e2026 65%); border: 1px solid #484f5d; border-top: 2px solid #7a9df4; border-radius: 14px; padding: 26px; box-shadow: 0 24px 65px #00000045, 0 0 40px #345fd60a, inset 0 1px 0 #ffffff08; }
+.insurance-calculator { min-width: 0; background: linear-gradient(145deg, #242831, #1b1e24 65%); border: 1px solid var(--border); border-radius: 14px; padding: 24px; }
+.insurance-calculator h2 { font-size: 20px; font-weight: 650; letter-spacing: -.5px; }
+.insurance-calculator > p { color: var(--muted); font-size: 12px; line-height: 1.7; margin-top: 8px; }
+.insurance-calculator-form { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 20px; }
+.insurance-calculator-form input, .insurance-calculator-form select { width: 100%; min-width: 0; background: #171a20; border: 1px solid #373e49; color: var(--foreground); font-size: 13px; border-radius: 6px; padding: 11px 12px; }
+.insurance-calculator-form input::placeholder { color: #939eae; }
+.insurance-calculator-form button { grid-column: 1 / -1; background: var(--action); color: #fff; font-size: 14px; padding: 13px; box-shadow: 0 4px 18px #345fd630; cursor: pointer; border-radius: 6px; }
+.insurance-calculator-form button:hover { background: #416be0; }
+.insurance-calculator-form input:focus-visible, .insurance-calculator-form select:focus-visible, .insurance-calculator-form button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .calculator-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .calculator-heading .eyebrow { margin-bottom: 7px; font-size: 9px; }
 .calculator-heading h2 { font-size: 23px; font-weight: 650; letter-spacing: -.6px; }
@@ -17,3 +26,12 @@
 .result-panel { border-top: 1px solid var(--border); margin-top: 24px; padding-top: 24px; }
 .result-panel .text-zinc-300 { color: #c4cbd5; font-size: 13px; }
 .result-panel .text-zinc-400 { color: var(--muted); }
+
+.calculator-adjustments { grid-column: 1 / -1; min-width: 0; border-top: 1px solid var(--border); margin-top: 8px; padding-top: 16px; display: grid; gap: 12px; }
+.calculator-adjustments legend { font-size: 14px; font-weight: 600; padding-right: 12px; }
+.calculator-adjustments input, .calculator-adjustments select { width: 100%; }
+.calculator-adjustments label { display: block; margin-bottom: 6px; }
+.calculator-adjustments p, .result-details, .result-warnings { font-size: 12px; line-height: 1.8; color: var(--muted); }
+.calculator-error { color: #ffd0c9; background: #432626; padding: 12px; border-radius: 6px; margin-bottom: 16px; }
+.result-details { margin-top: 20px; }
+.result-warnings { padding-left: 18px; list-style: disc; margin-top: 16px; }
