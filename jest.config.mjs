@@ -9,7 +9,7 @@ export default createJestConfig({
   testMatch: ['<rootDir>/tests/**/*.test.{ts,tsx}'],
   coverageProvider: 'v8',
   collectCoverageFrom: [
-    'app/utils/**/*.ts', 'app/services/**/*.ts', 'app/rules/**/*.ts',
+    'app/validation/**/*.ts', 'app/utils/**/*.ts', 'app/services/**/*.ts', 'app/rules/**/*.ts',
     'app/hooks/**/*.ts', 'app/components/calculator/**/*.tsx',
   ],
   coverageThreshold: { global: { statements: 90, branches: 80, functions: 90, lines: 90 } },

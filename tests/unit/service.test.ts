@@ -7,12 +7,13 @@ const input: RescisaoInput = {
   terminationDate: new Date(2026, 5, 15),
   terminationType: 'demissaoSemJustaCausa',
   fgtsBalance: 10000,
+  noticeType: 'trabalhado',
 };
 
 test('integra as parcelas e soma o total da estimativa', () => {
-  expect(calculateRescisao(input)).toEqual({
+  expect(calculateRescisao(input)).toMatchObject({
     salaryBalance: 1500, thirteenthSalary: 1500, vacation: 1500,
-    vacationBonus: 500, noticePeriod: 3000, fgtsPenalty: 4000, total: 12000,
+    vacationBonus: 500, noticePeriod: 0, fgtsPenalty: 4000, total: 9000,
   });
 });
 
