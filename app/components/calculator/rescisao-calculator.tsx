@@ -5,7 +5,7 @@ import { RescisaoForm } from './rescisao-form';
 import { RescisaoResultPanel } from './rescisao-result';
 
 export function RescisaoCalculator() {
-  const { result, ...form } = useRescisaoCalculator();
+  const { result, error, ...form } = useRescisaoCalculator();
 
   return (
     <div id="calculadora" className="calculator-card">
@@ -15,6 +15,7 @@ export function RescisaoCalculator() {
       </div>
       <p className="form-description">Comece pelas informações do seu contrato.</p>
 
+      {error && <p role="alert" className="calculator-error">{error}</p>}
       <RescisaoForm {...form} />
       <p className="form-note">Valores aproximados. A conferência final deve ser feita com um profissional habilitado.</p>
 
