@@ -1,5 +1,21 @@
 # Testes e fluxo TDD
 
+## Status dos problemas citados
+
+**Os dois bugs de datas abaixo já foram corrigidos**, no commit `0f416a8`.
+A seção sobre o ciclo TDD registra o histórico das falhas, não uma lista de
+correções pendentes. A nova execução de verificação confirmou 4 suítes e
+36 testes aprovados.
+
+| Problema encontrado antes da correção | Correção presente | Teste de regressão |
+| --- | --- | --- |
+| Contrato de 10/01 a 23/01 contava um mês com apenas 14 dias | Contagem inclusiva limitada ao intervalo efetivamente trabalhado | [dates.test.ts](../tests/unit/dates.test.ts) |
+| Data de saída voltava um dia no fuso de São Paulo | Conversão dos campos para meia-noite local com `T00:00:00` | [calculator.test.tsx](../tests/integration/calculator.test.tsx) |
+
+As [limitações do modelo de cálculo](architecture.md#limites-da-simulação)
+continuam documentadas separadamente. Elas não são falhas detectadas por
+esta suíte nem foram resolvidas apenas por ela passar.
+
 ## Ferramentas
 
 Jest com `next/jest` (transformação TypeScript/React pelo compilador do Next),
@@ -35,7 +51,7 @@ HTML fica em `coverage/lcov-report/index.html`.
 - Preenchimento do formulário, datas locais, resultado, aviso informativo e limpeza dos campos.
 - Bloqueio do envio com campos vazios ou desligamento anterior à admissão.
 
-## Ciclo aplicado nesta alteração
+## Histórico do ciclo TDD que corrigiu os bugs
 
 O código já existia. Os testes das funções existentes são testes de
 caracterização e regressão, não desenvolvimento original guiado por testes.
