@@ -16,8 +16,8 @@ export function useRescisaoCalculator() {
   function handleCalculate() {
     const rescisao = calculateRescisao({
       salary: Number(salary),
-      admissionDate: new Date(admissionDate),
-      terminationDate: new Date(terminationDate),
+      admissionDate: new Date(`${admissionDate}T00:00:00`),
+      terminationDate: new Date(`${terminationDate}T00:00:00`),
       terminationType,
       fgtsBalance: Number(fgtsBalance),
     });
