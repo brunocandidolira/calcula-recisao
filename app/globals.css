@@ -1,26 +1,27 @@
 @import "tailwindcss";
+@import "./styles/layout.css";
+@import "./styles/home.css";
+@import "./styles/calculator.css";
+@import "./styles/responsive.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #101113;
+  --foreground: #f1f2f5;
+  --surface: #222429;
+  --border: #30353e;
+  --muted: #a7aeb9;
+  --accent: #9cbbff;
+  --action: #345fd6;
+  color-scheme: dark;
 }
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+html { scroll-behavior: smooth; scroll-padding-top: 28px; }
+body { background: var(--background); color: var(--foreground); font-family: var(--font-geist-sans), Arial, sans-serif; }
+a, button, input, select, summary { -webkit-tap-highlight-color: transparent; }
+a, button { transition: background .2s, color .2s, border-color .2s; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }

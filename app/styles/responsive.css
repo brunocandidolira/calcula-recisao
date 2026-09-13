@@ -1,0 +1,30 @@
+@media (max-width: 1000px) {
+  .hero { gap: 36px; } .hero h1 { letter-spacing: -1.8px; }
+  .hero-copy { padding-top: 22px; } .calculator-card { padding: 22px; }
+}
+@media (max-width: 720px) {
+  .site-header, .hero, .steps, .guides, .faq, .site-footer { width: calc(100% - 36px); }
+  .site-header { min-height: 70px; gap: 10px; } .brand { font-size: 18px; }
+  .site-header nav > a:not(.nav-cta) { display: none; } .nav-cta { padding: 8px 10px; font-size: 11px; }
+  .brand-mark { width: 25px; height: 25px; margin-right: 7px; }
+  .hero { grid-template-columns: 1fr; padding-block: 32px 36px; gap: 28px; }
+  .hero-copy { padding-top: 0; } .hero h1 { font-size: 46px; max-width: 500px; }
+  .eyebrow { font-size: 9px; letter-spacing: 1px; margin-bottom: 16px; }
+  .hero-description { font-size: 14px; margin-block: 18px; }
+  .scope-note { margin-top: 22px; padding-top: 16px; max-width: none; }
+  .steps { grid-template-columns: 1fr; gap: 18px; }
+  .calculator-card { padding: 22px 18px; }
+  .calculator-heading h2 { font-size: 20px; }
+  .guides { padding-block: 42px 28px; }
+  .guides > h2, .faq h2 { font-size: 26px; }
+  .guide-grid, .faq { grid-template-columns: 1fr; }
+  .guide-grid { gap: 24px; }
+  .faq { gap: 12px; padding-bottom: 40px; }
+  .site-footer { align-items: flex-start; flex-direction: column; gap: 16px; }
+}
+@media (max-width: 380px) {
+  .calculator-form { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 37px; }
+  .estimate-badge { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
