@@ -28,3 +28,8 @@ POSIX (Linux/macOS/WSL). O relatório HTML fica em `coverage/lcov-report/index.h
 
 Consulte [a estratégia de testes e TDD](docs/testing.md) e
 [a arquitetura e o contrato do serviço](docs/architecture.md).
+
+## Curso do projeto
+
+Para aprender como construímos a aplicação, consulte o [curso prático completo](docs/curso/README.md):
+18 aulas com exemplos do código real, exercícios, gabarito e um projeto final com TDD.
